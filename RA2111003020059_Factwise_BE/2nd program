@@ -1,0 +1,22 @@
+
+def maxScore(cardpoints,k);
+   current_sum = sum(cardpoints[:k])
+   max_sum = current_sum
+
+   for i in range(1,k+1):
+      current_sum = current_sum - cardPoints[k-i]+cardPoints[-i]
+      max_sum = max(max_sum,current_sum)
+
+   return max_sum
+
+cardPoints1 = [1,2,3,4,5,6,1]
+k1 = 3
+print(maxScore(cardPoints1,k1))
+
+cardPoints2 = [2,2,2]
+k2 = 2 
+print(maxScore(cardPoints2,k2))
+
+cardPoints3 = [9,7,7,9,7,7,9]
+k3 = 7
+print(maxScore(cardPoints3,k3))
