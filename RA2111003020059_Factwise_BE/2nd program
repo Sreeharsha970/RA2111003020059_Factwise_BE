@@ -1,10 +1,10 @@
 
-def maxScore(cardpoints,k);
+def maxScore(cardpoints,k):
    current_sum = sum(cardpoints[:k])
    max_sum = current_sum
 
    for i in range(1,k+1):
-      current_sum = current_sum - cardPoints[k-i]+cardPoints[-i]
+      current_sum = current_sum - cardpoints[k-i]+ cardpoints[-i]
       max_sum = max(max_sum,current_sum)
 
    return max_sum
